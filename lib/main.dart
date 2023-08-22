@@ -28,14 +28,6 @@ Future main() async {
     minimumFetchInterval: const Duration(hours: 1),
   ));
 
-  // Database database = await openDatabase(
-  //     'pokemons_database.db',
-  //     version: 1,
-  //     onCreate: (Database db, int version) async {
-  //       await db.execute(
-  //           'CREATE TABLE pokemons(id INTEGER PRIMARY KEY, name TEXT, imagePath TEXT)');
-  //     });
-
   var database = await PokemonDatabaseProviderImpl().open();
 
   final useCases = ListUseCases(
@@ -75,6 +67,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        textTheme: const TextTheme(
+          displayMedium: TextStyle(
+            fontSize: 24,
+          fontWeight: FontWeight.normal,
+          ),
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),

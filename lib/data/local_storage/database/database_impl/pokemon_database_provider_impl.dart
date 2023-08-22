@@ -10,7 +10,7 @@ class PokemonDatabaseProviderImpl {
 
   PokemonDatabaseProviderImpl() {
     _createTableQuery =
-    'CREATE TABLE $_tableName(id INTEGER PRIMARY KEY, name TEXT, imagePath TEXT, firstAbility TEXT, secondAbility TEXT)';
+    'CREATE TABLE $_tableName(id INTEGER PRIMARY KEY, name TEXT, imagePath TEXT, typeFirst TEXT, typeSecond TEXT, weight INTEGER, firstAbility TEXT, secondAbility TEXT)';
   }
 
   Future<PokemonDatabase> open() async {

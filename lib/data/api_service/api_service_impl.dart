@@ -18,13 +18,16 @@ class PokemonApiServiceImpl extends PokemonApiService {
     return _mapToDomainPokemon(pokemonJsonModel, path);
   }
 
-  Pokemon _mapToDomainPokemon(PokemonJsonModel jsonModel, String spritePath) {
+  Pokemon _mapToDomainPokemon(PokemonJsonModel jsonModel, String imagePath) {
     return Pokemon(
       id: jsonModel.id,
       name: jsonModel.name,
-      imagePath: spritePath,
+      imagePath: imagePath,
+      typeFirst: jsonModel.typeFirst,
+      typeSecond: jsonModel.typeSecond,
+      weight: jsonModel.weight,
       firstAbility: jsonModel.firstAbility,
-      secondAbility: jsonModel.secondAbility
+      secondAbility: jsonModel.secondAbility,
     );
   }
 }

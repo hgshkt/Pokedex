@@ -45,6 +45,9 @@ class PokemonDatabaseImpl extends PokemonDatabase {
       'id': pokemon.id,
       'name': pokemon.name,
       'imagePath': pokemon.imagePath,
+      'typeFirst': pokemon.typeFirst,
+      'typeSecond': pokemon.typeSecond,
+      'weight': pokemon.weight,
       'firstAbility': pokemon.firstAbility,
       'secondAbility': pokemon.secondAbility
     };
@@ -55,6 +58,9 @@ class PokemonDatabaseImpl extends PokemonDatabase {
       id: map['id'],
       name: map['name'],
       imagePath: map['imagePath'],
+      typeFirst: map['typeFirst'],
+      typeSecond: map['typeSecond'],
+      weight: map['weight'],
       firstAbility: map['firstAbility'],
       secondAbility: map['secondAbility'],
     );
