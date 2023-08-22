@@ -21,6 +21,15 @@ class _InfoScreenState extends State<InfoScreen> {
     final pokemon = ModalRoute.of(context)!.settings.arguments as Pokemon;
 
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        title: Text(pokemon.name.toUpperCase()),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
